@@ -13,7 +13,7 @@ def click_cart_in_top_menu():
     driver.find_element(By.XPATH,'//*[@id="site-header-cart"]/li[2]/div/div/ul/li/a[2]').click()
 def input_coupon_and_hit_enter():
     coupon_field=wait.until(EC.visibility_of_element_located((By.ID,'coupon_code')))
-    coupon_field.send.keys(coupon_code)
+    coupon_field.send_keys(coupon_code)
     coupon_field.send_keys(Keys.ENTER)
 def verify_total_is_0():
     wait.until(EC.text_to_be_present_in_element((By.XPATH,'//*[@id="site-header-cart"]/li[1]/a/span[1]'),'$0.00'))
